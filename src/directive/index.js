@@ -10,7 +10,7 @@ const has = Vue.directive('has', {
 
 // <el-input>的自动聚焦
 const focus = Vue.directive('focus', {
-  inserted(el, bindings, vnode) {
+  inserted(el) {
     const inp = el.getElementsByTagName('input')[0]
     inp.focus()
   }
@@ -33,8 +33,28 @@ const clickOutside = Vue.directive('clickOutside', {
   }
 })
 
+// 防抖，使用时可传入回调函数和延迟时间
+const debounce = Vue.directive('debounce', {
+  inserted(el, bindings) {
+    const {callback, delay} = bindings.value
+    let timer
+    el.addEventListener('click', () => {
+      if (timer) clearTimeout(timer)
+      if (!el.disabled) {
+        el.disabled = true
+        callback()
+        timer = setTimeout(() => {
+          el.disabled = false
+        }, delay)
+      }
+    })
+  }
+})
+
+
 export {
   has,
   focus,
-  clickOutside
+  clickOutside,
+  debounce
 }

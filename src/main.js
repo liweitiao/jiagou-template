@@ -7,7 +7,7 @@ import VueAxios from 'vue-axios'
 // import './plugins/element.js'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import { has, focus, clickOutside } from '@/directive'
+import { has, focus, clickOutside, debounce } from '@/directive'
 
 
 Vue.use(ElementUI);

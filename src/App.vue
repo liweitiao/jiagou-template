@@ -9,7 +9,7 @@
         <br>
         <el-input v-focus></el-input>
         <el-button v-has="'edit'">编辑</el-button>
-        <el-button v-has="'add'" v-click-outside="close">添加</el-button>
+        <el-button v-has="'add'" v-debounce="{callback:close, delay: 5000}">添加</el-button>
         <Menu></Menu>
       </el-main>
       

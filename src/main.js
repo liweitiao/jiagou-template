@@ -16,8 +16,8 @@ Vue.use(ElementUI);
 Vue.use(VueAxios, axios)
 
 // axios.defaults.baseURL = 'http://127.0.0.1:8000/'
-axios.defaults.baseURL = '/api'
-axios.defaults.timeout = 1000
+// axios.defaults.baseURL = '/api'
+// axios.defaults.timeout = 1000
 
 // 拦截器是可以有多个的
 // 这种方式的拦截器是会互相影响的，不能单独为某些接口设置拦截器

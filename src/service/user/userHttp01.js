@@ -45,8 +45,19 @@ const getUser03 = () => {
     })
 }
 
+// 请求本地public中的数据
+const getUser04 = () => {
+    return axios.get('/mock/user/login.json')
+}
+
+const getUser05 = () => {
+    return axios.get('/user/login')
+}
+
 export default {
     getUser01,
     getUser02,
-    getUser03
+    getUser03,
+    getUser04,
+    getUser05
 }

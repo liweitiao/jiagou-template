@@ -6,10 +6,18 @@
  * created by liweitiao
  */
 import axios from 'axios'
-// 使用代理解决跨域问题时导入该配置
+// 1.devServer. 使用代理解决跨域问题时导入该配置
 // import config from '@/config'
-// 使用cors解决跨域问题时导入该配置
-import config from '@/config/env'
+
+// 2.cors. 使用cors解决跨域问题时导入该配置
+// import config from '@/config/env'
+
+// 3.mock模拟接口，当mock为true时，打开mock的功能，当为false时，关闭mock功能
+const mock = true
+if (mock) {
+    require('@/mock/api')
+}
+
 import store from '@/store'
 
 // 获取时间戳字符串
@@ -17,7 +25,8 @@ const getTimeStamp = () => 'timestamp=' + new Date().getTime().toString()
 
 class HttpRequest {
     constructor() {
-        this.baseURL = config.baseURL
+        // 如果去掉baseURL,则可请求public目录下的json数据
+        // this.baseURL = config.baseURL
         this.timeout = 5000
     }
 
@@ -79,10 +88,10 @@ class HttpRequest {
                     store.commit('user/pushToken', c) // 订阅模式
                 })
 
-                let url = config.url
-                url = url + (url.indexOf('?') === -1 ? '?' : '&') + getTimeStamp()
-                config.url = url
-                console.log('httpRequest---interceptors01---', url)
+                // let url = config.url
+                // url = url + (url.indexOf('?') === -1 ? '?' : '&') + getTimeStamp()
+                // config.url = url
+                // console.log('httpRequest---interceptors01---', url)
                 return config
             },
             error => {

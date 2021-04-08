@@ -76,44 +76,15 @@ Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
 // 获取用户权限 
-router.beforeEach(async (to, from, next) => {
-  if (!store.state.hasPermission) {
-    let newRoutes = await store.dispatch('getNewRoute')
-    console.log('newRoutes111----', newRoutes)
-    router.addRoutes(newRoutes) // 动态添加有权限的路由
-    // newRoutes.forEach(route => router.addRoute(route.name, route))
-    // let routes = [
-    //   {
-    //     path: '/lottery',
-    //     name: 'lottery',
-    //     label: '彩票',
-    //     component: () => import(/* webpackChunkName: 'lottery' */'@/pages/cart/lottery.vue')
-    //   },
-    //   {
-    //     path: '/product',
-    //     name: 'product',
-    //     label: '商品',
-    //     component: () => import(/* webpackChunkName: 'product' */'@/pages/cart/product.vue'),
-    //     children: [
-    //       {
-    //         path: 'fruit',
-    //         name: 'fruit',
-    //         label: '水果',
-    //         component: () => import(/* webpackChunkName: 'fruit' */'@/pages/cart/fruit.vue'),
-    //       }
-    //     ]
-    //   }
-    // ]
-
-    // router.addRoutes(routes)
-    // console.log('from, to, next', next)
-    // routes.forEach( route => router.options.routes.push(route))
-    console.log('router444---', router)
-    next({...to})
-  } else {
-    next()
-  }
-})
+// router.beforeEach(async (to, from, next) => {
+//   if (!store.state.hasPermission) {
+//     let newRoutes = await store.dispatch('getNewRoute')
+//     router.addRoutes(newRoutes) // 动态添加有权限的路由
+//     next({...to})
+//   } else {
+//     next()
+//   }
+// })
 
 new Vue({
   router,

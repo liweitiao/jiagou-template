@@ -5,19 +5,20 @@
 // }
 
 module.exports = {
-    devServer: {
-        host: 'localhost',
-        port: 8000,
-        proxy: {
-            '/api': {
-                target: 'http://localhost:8000',
-                changeOrigin: true,
-                pathRewrite: {
-                    '/api': ''
-                }
-            }
-        }
-    },
+    // 使用代理解决跨域
+    // devServer: {
+    //     host: 'localhost',
+    //     port: 8000,
+    //     proxy: {
+    //         '/api': {
+    //             target: 'http://localhost:8000',
+    //             changeOrigin: true,
+    //             pathRewrite: {
+    //                 '/api': ''
+    //             }
+    //         }
+    //     }
+    // },
     chainWebpack: config => {
         // 可以更改别名
         // config.resolve.alias.set('@', resolve('src'))

@@ -6,7 +6,10 @@
  * created by liweitiao
  */
 import axios from 'axios'
-import config from '@/config'
+// 使用代理解决跨域问题时导入该配置
+// import config from '@/config'
+// 使用cors解决跨域问题时导入该配置
+import config from '@/config/env'
 import store from '@/store'
 
 // 获取时间戳字符串

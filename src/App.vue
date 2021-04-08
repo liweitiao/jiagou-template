@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-container>
+    <el-container v-addWaterMarker="{text: 'liweitiao'}">
       <!-- <el-header>
         <PageHeader></PageHeader>
       </el-header> -->

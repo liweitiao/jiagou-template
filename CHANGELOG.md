@@ -13,9 +13,9 @@
 ### 📝 文档
 范围|描述|commitId
 --|--|--
- - | 增加tech-doc.md 文档 | [24fabea](https://github.com/liweitiao/jiagou-template/commit/24fabea)
+ - | 修改 README和tech-doc 文档 | [b91592e](https://github.com/liweitiao/jiagou-template/commit/b91592e)
  - | 完善md文档中项目目录的说明 | [b880d00](https://github.com/liweitiao/jiagou-template/commit/b880d00)
- - | 完善README.md文档中关于规范的说明 | [8ea7b3f](https://github.com/liweitiao/jiagou-template/commit/8ea7b3f)
+ - | 完善README.md文档中关于规范的说明 & docs: 增加tech-doc.md 文档 & docs: 提交CHANGELOG | [c5c5725](https://github.com/liweitiao/jiagou-template/commit/c5c5725)
 
 
 ### 🔨 代码重构

@@ -4,14 +4,12 @@
 
 ## 源码文件目录
 
-前端项目源码位于 `/src/` 下，即另 `@ = /src/`
+> 前端项目源码位于 `/src/` 下，即另 `@ = /src/`
 
 ### API
-> `@/service/` 目录下是所有接口函数
+> `@/service/` 目录下是所有的请求接口
 
 > 所有接口文件都要导入 `@/utils/httpRequest` 文件，该文件为axios的二次封装，文件中有详细用法说明
-
-### API函数规范
 
 #### API用法示例
 <pre>
@@ -21,7 +19,7 @@ save(data) {
 }
 </pre>
 
-#### API调用方式
+#### API调用示例
 <pre>
 API.save(data).then(() => {
               this.$msg({
@@ -51,8 +49,8 @@ Vue.directive('focus', focus)
 import '@/plugins/element'
 </pre>
 
-### 路由： @/router/
+### 路由： @/router
 
-### 状态管理： @/store/
+### 状态管理： @/store
 
 > 统一管理项目状态

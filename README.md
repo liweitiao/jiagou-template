@@ -46,7 +46,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## 目录结构
 
-<pre></pre>
+<pre>
 |-- jiagou-template
 |   |-- node_modules  //npm包
 |   |-- public

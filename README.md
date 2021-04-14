@@ -28,10 +28,25 @@ npm run test:e2e
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+# 附录：
+
+## 命名规范
+
+ 参考 [Element](https://github.com/ElemeFE/element)
+
+### 文件&文件夹
+
+1.不要出现大写字母，请用中划线代替驼峰
+
+2.文件名优先使用 index 表示该目录下默认文件
+
+### css 命名
+
+参考 [BEM 规范](https://www.cnblogs.com/coder-zyz/p/6749295.html)
 
 ## 目录结构
 
-<pre>
+<pre></pre>
 |-- jiagou-template
 |   |-- node_modules  //npm包
 |   |-- public

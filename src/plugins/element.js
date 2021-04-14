@@ -1,8 +1,30 @@
 import Vue from 'vue'
-import { Button } from 'element-ui'
-// import lang from 'element-ui/lib/locale/lang/'
-// import locale from 'element-ui/lib/locale'
+import 'element-ui/lib/theme-chalk/index.css'
+import {
+  Input,
+  Button,
+  Container,
+  Aside,
+  Main,
+  Menu,
+  MenuItem,
+  Submenu,
+  Upload,
+  Loading
+} from 'element-ui'
 
-// locale.use(lang)
 
-Vue.use(Button)
+const componentArr = [
+  Input,
+  Button,
+  Container,
+  Aside,
+  Main,
+  Menu,
+  MenuItem,
+  Submenu,
+  Upload,
+  Loading
+]
+
+componentArr.forEach(component => Vue.use(component))

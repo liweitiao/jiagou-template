@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <el-container v-addWaterMarker="{text: 'liweitiao'}">
+    <el-container>
       <!-- <el-header>
         <PageHeader></PageHeader>
       </el-header> -->
@@ -8,8 +8,8 @@
         <router-view></router-view>
         <br>
         <el-input v-focus></el-input>
-        <el-button v-has="'edit'">编辑</el-button>
-        <el-button v-has="'add'" v-debounce="{callback:close, delay: 5000}">添加</el-button>
+        <el-button v-permission="'edit'">编辑</el-button>
+        <el-button v-permission="'add'" v-debounce="{callback:close, delay: 5000}">添加</el-button>
         <Menu></Menu>
       </el-main>
       
